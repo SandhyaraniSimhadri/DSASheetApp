@@ -15,7 +15,7 @@ export default function TopicList({ onSelectTopic, selectedTopic, keyUpdate }) {
 
   return (
     <div className="space-y-3">
-      {topics.map((t) => (
+      {topics?.length > 0 && topics.map((t) => (
         <div
           key={t._id}
           onClick={() => handleSelect(t)}

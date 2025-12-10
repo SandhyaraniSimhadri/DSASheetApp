@@ -59,7 +59,7 @@ export default function ProblemList({ topic, onTick }) {
         </thead>
 
         <tbody>
-          {problems.map((p) => (
+          {problems.length > 0 && problems.map((p) => (
             <tr key={p._id} className="border-b hover:bg-gray-50">
               <td className="p-3">
                 <input
@@ -92,7 +92,7 @@ export default function ProblemList({ topic, onTick }) {
               <td className="p-3 font-bold">{p.level.toUpperCase()}</td>
 
               <td className="p-3">
-                {completed.includes(p._id) ? (
+                {completed?.length > 0 && completed.includes(p._id) ? (
                   <span className="text-green-600 font-medium">Done</span>
                 ) : (
                   <span className="text-red-500 font-medium">Pending</span>
