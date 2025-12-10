@@ -22,7 +22,7 @@ export default function TopicList({ onSelectTopic, selectedTopic, keyUpdate }) {
           className={`
             cursor-pointer p-3 rounded-lg bg-blue-100 border
             border-blue-300 hover:bg-blue-200 flex justify-between items-center
-            ${selectedTopic._id === t._id ? "bg-blue-400" : "bg-blue-100"}`}
+            ${selectedTopic?._id === t?._id ? "bg-blue-400" : "bg-blue-100"}`}
         >
           <span className="font-medium">{t.title}</span>
           <span
